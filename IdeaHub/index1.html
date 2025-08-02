@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IdeaHUb</title>
+</head>
+<body>
+
+    <header style="padding: 20px; text-align: center; background-color: #f0f0f0; border-bottom: 2px solid #ccc;">
+        <h1>IdeaHub</h1>
+        <div id="auth-section" style="margin-top: 10px;">
+            <span id="user-status" style="margin-right: 10px;">Guest</span>
+            <button id="login-button">Login</button>
+            <button id="logout-button" style="display: none;">Logout</button>
+            <button id="submit-idea-button" style="display: none;">Submit Idea</button>
+        </div>
+    </header>
+
+    <main style="padding: 20px;">
+        <div style="margin-bottom: 20px;">
+            <input type="text" id="search-bar" placeholder="Search for ideas..." style="width: 100%; padding: 10px; box-sizing: border-box;">
+        </div>
+        <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <button id="sort-recent-button">Sort by Recent</button>
+            <button id="sort-popular-button">Sort by Popular</button>
+        </div>
+
+        <div id="ideas-feed" style="display: grid; gap: 20px;">
+            
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="load-more-button">Load More</button>
+        </div>
+    </main>
+
+    
+    <div id="submit-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+        <div style="background-color: white; padding: 20px; border-radius: 8px;">
+            <h2>Submit a New Idea</h2>
+            <form id="submit-form">
+                <div style="margin-bottom: 10px;">
+                    <label for="idea-title">Title:</label><br>
+                    <input type="text" id="idea-title" name="idea-title" required style="width: 100%; padding: 8px;">
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="idea-description">Description:</label><br>
+                    <textarea id="idea-description" name="idea-description" required style="width: 100%; padding: 8px;"></textarea>
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                    <button type="button" id="close-modal-button">Cancel</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
